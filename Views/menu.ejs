@@ -1,0 +1,32 @@
+<DOCTYPE html >
+    <html lang="en">
+        <head>
+        <title>The UNF Liquid Death Bar and Grill </title>
+        <link rel="stylesheet" href="">
+
+    </head>
+    <div id="home" class="UNF">
+        <h1>THIS IS OUR MENU PLEASE ORDER OR ELSE</h1>
+    <div class="Navigation Bar">    
+    <a href="/">HOME</a>  
+    <a href="menu">MENU</a>       
+    </div>
+
+    <body>
+        BEST SELLER 
+
+        <ul>
+            <% for(var item of drink) { %>
+                <li><%= item.drinkname%></li>
+                <ul>
+                <li><%= item.drinkInfo%></li>
+                </ul>
+                <% } %> 
+          </ul>
+          
+        
+    
+
+    </body>
+    
+    </html>

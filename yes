@@ -1,0 +1,72 @@
+
+
+//POST METHODS
+
+app.set('Views', path.join(__dirname,'views'));
+// SITE ENDPOINTS HOME AND MENU GET REQUESTS
+app.get('/', (req, res) => {
+    res.render('index',);
+  });
+
+  app.get('/menu', (req, res) => {
+    res.render('menu', {
+      drinks1: [
+        {
+          drinkName: 'Champa Champagne',}
+         /* drinkInfo: "Cognac, angostura bitters, champagne with a cherry on top",
+          drinkPrice: "$57",
+          drinkID:"1",
+      },
+      {
+          drinkName: "Mosco Mule",
+          drinkInfo: "belvedere, lime, and ginger beer a classic",
+          drinkPrice: "$42",
+          drinkID:"2",
+      },
+      {
+          drinkName: "Bodega Beerus",
+          drinkInfo: "Bodega cat whiskey, gin, grapefruit beer, and a mix of spices",
+          drinkPrice: "$999",
+          drinkID:"3",
+      }*/
+      ]
+    });
+
+  });
+
+  app.get('*', (req, res) => {
+    res.send('404 Page Does Not Exist');
+  });
+
+  module.exports = app;
+
+
+
+
+  <ul>
+  <% for(var item of drinks) { %>
+      <li><%= item.drinkName%></li>
+      <% } %> 
+</ul>
+
+
+[
+  {
+      drinkName: "Champa Champagne",
+      drinkInfo: "Cognac, angostura bitters, champagne with a cherry on top",
+      drinkPrice: "$57",
+      drinkID:"1",
+  },
+  {
+      drinkName: "Mosco Mule",
+      drinkInfo: "belvedere, lime, and ginger beer a classic",
+      drinkPrice: "$42",
+      drinkID:"2",
+  },
+  {
+      drinkName: "Bodega Beerus",
+      drinkInfo: "Bodega cat whiskey, gin, grapefruit beer, and a mix of spices",
+      drinkPrice: "$999",
+      drinkID:"3",
+  }
+  ];
