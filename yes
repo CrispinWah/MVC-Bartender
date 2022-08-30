@@ -69,4 +69,21 @@ app.get('/', (req, res) => {
       drinkPrice: "$999",
       drinkID:"3",
   }
-  ];
+  ]; <% for(var item of drink) { %>
+    <li><a href="#"><%= item.drinkname%></a></li>
+    <ul>
+    <li><%= item.drinkInfo%></li>
+    </ul>
+    <% } %> 
+
+    <ul>
+            <%  %>
+           <%   console.log(isArr = Object.prototype.toString.call(drink) == '[object Array]');%>
+            <% console.log(Object.values(drink));%>
+            
+            <li><%= Object.values(drink)%></li> 
+          </ul>
+
+<%  for (var i in drink) {
+  console.log(drink[i]) 
+} %> 

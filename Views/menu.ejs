@@ -14,18 +14,17 @@
 
     <body>
         BEST SELLER 
-
-        <ul>
-            <% for(var item of drink) { %>
-                <li><%= item.drinkname%></li>
-                <ul>
-                <li><%= item.drinkInfo%></li>
-                </ul>
-                <% } %> 
-          </ul>
-          
         
-    
+            <%  let txt = "";%>
+           <%   //console.log(isArr = Object.prototype.toString.call(drink) == '[object Array]');%>
+            <% //console.log(Object.values(drink));%>
+            
+         <% for (var i in drink){ %> 
+            <br><a href="#"><%= txt += drink[i];%></a> 
+          
+                  <% } %> 
+                 
+          
 
     </body>
     
