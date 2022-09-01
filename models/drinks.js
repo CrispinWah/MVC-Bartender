@@ -1,7 +1,8 @@
-const drink = [];
-module.exports.drink = [
-    "Champa Champagne","Beerus's Beer",  "Quitela Tequila"
-    ];
+const drink = ["Champa Champagne","Beerus's Beer",  "Quitela Tequila"];
+
+
+module.exports = drink;
+
     
 /*module.exports.arrpush = function(){module.exports.drink.push('Champa Champagne', "Cognac, angostura bitters, champagne with a cherry on top");};
 drinkName: 'Champa Champagne', drinkInfo: "Cognac, angostura bitters, champagne with a cherry on top", },

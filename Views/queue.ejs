@@ -1,0 +1,26 @@
+<DOCTYPE html >
+    <html lang="en">
+        <head>
+        <title>The UNF Liquid Death Bar and Grill  </title>
+        <link rel="stylesheet" href="">
+    </head>
+    <div id="home" class="UNF">
+    <h1>YOU LIKE HURTING PEOPLE, DONT YOU</h1>
+    <div class="Navigation Bar">    
+    <a href="/">HOME</a>  
+    <a href="menu">MENU</a>   
+    <a href="queue">ORDER QUEUE</a>  
+    <body>
+
+
+        <ul>
+            <% for(var i=0; i<orderArr.length; i++) {%>
+               <li><%= orderArr[i] %>
+                </li>
+                <% } %>
+                </ul>
+    </body>
+    
+    </div>
+    
+    </html>

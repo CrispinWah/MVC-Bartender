@@ -9,22 +9,44 @@
         <h1>THIS IS OUR MENU PLEASE ORDER OR ELSE</h1>
     <div class="Navigation Bar">    
     <a href="/">HOME</a>  
-    <a href="menu">MENU</a>       
+    <a href="menu">MENU</a>      
+    <a href="queue">ORDER QUEUE</a>   
     </div>
 
     <body>
         BEST SELLER 
         
-            <%  let txt = "";%>
-           <%   //console.log(isArr = Object.prototype.toString.call(drink) == '[object Array]');%>
+           
+           <%//console.log(isArr = Object.prototype.toString.call(drink) == '[object Array]');%>
             <% //console.log(Object.values(drink));%>
-            
-         <% for (var i in drink){ %> 
-            <br><a href="#"><%= txt += drink[i];%></a> 
-          
-                  <% } %> 
-                 
-          
+            <% //console.log(drink);%>
+        
+            <ul>
+                <% for(var i=0; i<drink.length; i++) {%>
+                   <li><%= drink[i] %> <button id="A" 
+                    >Click to Order->
+                    <%= drink[i]%>
+                   </button>
+                  <% orderArr.push("CHAMPA") %> 
+                   <script> //add event listener for button that pushes user order onto orderArr in models
+                   //hardcoded for timesakes
+                   //still have to figure out how to push the specific "DRINK" but everything else works 
+                   //MVC WORKS
+                   const element = document.getElementById("A");
+                    element.addEventListener("click", function() { 
+                     document.getElementById("demo").innerHTML = "Order Placed"; 
+                    }); 
+
+  
+
+                   </script>
+                    PLACE ORDER</li>
+                    
+                    
+                <% } %>
+                </ul>
+                
+                <p id="demo"></p>
 
     </body>
     

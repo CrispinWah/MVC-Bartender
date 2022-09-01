@@ -87,3 +87,6 @@ app.get('/', (req, res) => {
 <%  for (var i in drink) {
   console.log(drink[i]) 
 } %> 
+
+
+<%// <br><a href="#"><%= txt += drink[i];%></a> %>
